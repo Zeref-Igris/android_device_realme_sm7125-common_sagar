@@ -75,6 +75,9 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final int GESTURE_SWIPE_LEFT_SCANCODE = 258;
     private static final int GESTURE_SWIPE_RIGHT_SCANCODE = 257;
 
+    private static final int GESTURE_FP_DOWN_SCANCODE = 260;
+    private static final int GESTURE_FP_UP_SCANCODE = 261;
+
     private final Context mContext;
     private Context mAppContext = null;
 
@@ -175,9 +178,14 @@ public class KeyHandler implements DeviceKeyHandler {
                         Action.ACTION_MEDIA_NEXT);
                         doHapticFeedback();
                 break;
+            case GESTURE_FP_DOWN_SCANCODE:
+                    action = null;
+                    DozeUtils.launchDozePulse(mAppContext);
+                break;
             }
 
-            if (DEBUG) Slog.d(TAG, "scancode: " + event.getScanCode() + "action: " + action);
+//            if (DEBUG) 
+Slog.d(TAG, "scancode: " + event.getScanCode() + "action: " + action);
 
             if (action == null || action.equals(Action.ACTION_NULL)) return;
 

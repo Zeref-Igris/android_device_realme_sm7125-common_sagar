@@ -59,6 +59,10 @@ odm/lib/libqtigef.so
 odm/lib64/libqtigef.so
 
 # Audio Dolby
+my_product/app/OppoDolbyService/OppoDolbyService.apk:system/app/OppoDolbyService/OppoDolbyService.apk
+my_product/priv-app/daxService/daxService.apk:system/priv-app/daxService/daxService.apk
+my_product/etc/permissions/com.dolby.daxservice.xml:system/etc/permissions/com.dolby.daxservice.xml
+odm/etc/media_codecs_dolby_audio.xml
 -odm/etc/vintf/manifest/manifest_dax_dolby.xml
 odm/etc/dolby/multimedia_dolby_dax_default.xml
 odm/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
